@@ -1,0 +1,152 @@
+Linux Basic Commands
+
+Linux commands are programs that can be executed from a terminal to perform
+different operations such as navigating directories, creating files,
+copying files, searching for information, and managing permissions.
+
+1. pwd
+
+The pwd command means "print working directory". It displays the absolute
+path of the directory that the user is currently in.
+
+Example:
+pwd
+
+If the current directory is /home/user/projects, pwd displays:
+
+/home/user/projects
+
+
+2. ls
+
+The ls command lists the files and directories in the current directory.
+
+Example:
+ls
+
+The command can also be used with options. For example:
+
+ls -l
+
+The -l option displays files in a detailed listing format.
+
+
+3. cd
+
+The cd command means "change directory". It is used to move from one
+directory to another.
+
+Example:
+cd /home/user
+
+To move to the parent directory:
+
+cd ..
+
+
+4. mkdir
+
+The mkdir command creates a new directory.
+
+Example:
+mkdir projects
+
+This creates a directory called projects in the current directory.
+
+
+5. touch
+
+The touch command can be used to create an empty file.
+
+Example:
+touch notes.txt
+
+This creates an empty file called notes.txt if the file does not already
+exist.
+
+
+6. cp
+
+The cp command copies files or directories.
+
+Example:
+cp notes.txt backup.txt
+
+This creates a copy of notes.txt called backup.txt.
+
+
+7. mv
+
+The mv command moves a file or directory. It can also be used to rename
+files.
+
+Example:
+mv notes.txt documents/
+
+This moves notes.txt into the documents directory.
+
+Another example:
+
+mv old.txt new.txt
+
+This renames old.txt to new.txt.
+
+
+8. rm
+
+The rm command removes files.
+
+Example:
+rm notes.txt
+
+To remove a directory and its contents recursively:
+
+rm -r directory_name
+
+The rm command should be used carefully because deleted files may not be
+recoverable through a normal recycle bin.
+
+
+9. cat
+
+The cat command displays the contents of a file in the terminal.
+
+Example:
+cat notes.txt
+
+
+10. grep
+
+The grep command searches for text matching a pattern.
+
+Example:
+grep "error" application.log
+
+This searches application.log for lines containing the word "error".
+
+
+11. find
+
+The find command searches for files and directories based on conditions
+such as their name.
+
+Example:
+find /home/user -name "notes.txt"
+
+This searches under /home/user for a file named notes.txt.
+
+
+12. chmod
+
+The chmod command changes the permissions of a file or directory.
+
+Linux permissions control whether users can read, write, or execute a file.
+
+Example:
+
+chmod +x script.sh
+
+This adds execute permission to script.sh.
+
+Linux file permissions are commonly represented using read (r), write (w),
+and execute (x) permissions.

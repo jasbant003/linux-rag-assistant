@@ -1,0 +1,123 @@
+Linux Processes Basics
+
+A process is a running instance of a program. When a program is executed,
+the Linux operating system creates a process to manage its execution.
+
+1. What Is a Process?
+
+A process is a program that is currently running.
+
+For example, when a user starts a text editor, Linux creates a process for
+that application.
+
+A process has resources associated with it, including memory and CPU time.
+Linux keeps track of running processes so that they can be managed by the
+operating system.
+
+
+2. Process ID (PID)
+
+Every running process is assigned a unique Process ID, commonly called a
+PID.
+
+The PID allows users and the operating system to identify a specific
+process.
+
+For example, if a process has PID 1234, commands can use 1234 to refer to
+that particular process.
+
+
+3. ps
+
+The ps command displays information about currently running processes.
+
+Example:
+
+ps
+
+This displays processes associated with the current terminal session.
+
+A commonly used option is:
+
+ps aux
+
+This displays information about processes running on the system, including
+processes belonging to other users.
+
+
+4. top
+
+The top command provides a real-time view of running processes.
+
+It displays information such as CPU usage, memory usage, process IDs, and
+process names.
+
+Example:
+
+top
+
+Unlike a normal ps command, top continuously updates the displayed
+information while it is running.
+
+
+5. kill
+
+The kill command sends a signal to a process.
+
+It is commonly used to request that a process terminate.
+
+Example:
+
+kill 1234
+
+This sends a termination signal to the process with PID 1234.
+
+If a process does not respond to a normal termination request, a stronger
+signal can be used:
+
+kill -9 1234
+
+The -9 option sends SIGKILL, which immediately terminates the process.
+It should be used carefully because the process does not get an opportunity
+to perform normal cleanup.
+
+
+6. Foreground Processes
+
+A foreground process runs while the terminal waits for the process to
+finish.
+
+For example:
+
+python script.py
+
+The terminal remains occupied by the command until the program finishes or
+is stopped.
+
+
+7. Background Processes
+
+A background process can run without blocking the terminal.
+
+A command can be started in the background by adding an ampersand (&).
+
+Example:
+
+python script.py &
+
+The terminal can then be used for other commands while the program
+continues running.
+
+
+8. Process Management
+
+Linux provides several commands for inspecting and managing processes.
+
+Common commands include:
+
+ps     - displays process information
+top    - provides a real-time process view
+kill   - sends a signal to a process
+
+Together, these commands allow users to inspect running programs and
+manage processes from the terminal.
