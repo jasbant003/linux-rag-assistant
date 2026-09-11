@@ -15,18 +15,22 @@ It retrieves relevant information from the knowledge base and uses that context 
 ## Architecture
 
 ```text
-User Question
-      ↓
-Knowledge Retrieval
-      ↓
-Parser
-      ↓
-Prompt (Context + Question)
-      ↓
-Gemini Agent
-      ↓
-Answer
+                         ┌──→ Knowledge Retrieval
+                         │          ↓
+                         │        Parser
+                         │          ↓
+User Question ───────────┼──────→ Context
+                         │
+                         └──────→ Question
+                                    ↓
+                              Prompt
+                                    ↓
+                              Gemini Agent
+                                    ↓
+                              Chat Output
 ```
+
+The workflow takes the user's question, retrieves relevant information from the Linux knowledge base, and combines the retrieved context with the original question in the prompt before sending it to the Gemini agent.
 
 The knowledge base uses document chunking, Gemini embeddings, and a local Chroma vector store for semantic retrieval.
 
